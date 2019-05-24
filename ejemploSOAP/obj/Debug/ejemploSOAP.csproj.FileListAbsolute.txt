@@ -1,0 +1,10 @@
+C:\Users\ROCM9\Documents\GITHUB\ejemploSOAP\ejemploSOAP\bin\Debug\ejemploSOAP.exe.config
+C:\Users\ROCM9\Documents\GITHUB\ejemploSOAP\ejemploSOAP\bin\Debug\ejemploSOAP.exe
+C:\Users\ROCM9\Documents\GITHUB\ejemploSOAP\ejemploSOAP\bin\Debug\ejemploSOAP.pdb
+C:\Users\ROCM9\Documents\GITHUB\ejemploSOAP\ejemploSOAP\obj\Debug\ejemploSOAP.csprojAssemblyReference.cache
+C:\Users\ROCM9\Documents\GITHUB\ejemploSOAP\ejemploSOAP\obj\Debug\ejemploSOAP.Form1.resources
+C:\Users\ROCM9\Documents\GITHUB\ejemploSOAP\ejemploSOAP\obj\Debug\ejemploSOAP.Properties.Resources.resources
+C:\Users\ROCM9\Documents\GITHUB\ejemploSOAP\ejemploSOAP\obj\Debug\ejemploSOAP.csproj.GenerateResource.cache
+C:\Users\ROCM9\Documents\GITHUB\ejemploSOAP\ejemploSOAP\obj\Debug\ejemploSOAP.csproj.CoreCompileInputs.cache
+C:\Users\ROCM9\Documents\GITHUB\ejemploSOAP\ejemploSOAP\obj\Debug\ejemploSOAP.exe
+C:\Users\ROCM9\Documents\GITHUB\ejemploSOAP\ejemploSOAP\obj\Debug\ejemploSOAP.pdb

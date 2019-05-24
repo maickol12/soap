@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:createSale" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="urn:createSale" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="urn:createSale">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="ResultData">
+        <xsd:all>
+          <xsd:element name="strStatus" type="xsd:string" />
+          <xsd:element name="strCode" type="xsd:string" />
+          <xsd:element name="strResult" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="createSaleRequest">
+    <wsdl:part name="strUser" type="xsd:string" />
+    <wsdl:part name="strPassword" type="xsd:string" />
+    <wsdl:part name="strXML" type="xsd:string" />
+    <wsdl:part name="strEnvironment" type="xsd:string" />
+    <wsdl:part name="strInstance" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="createSaleResponse">
+    <wsdl:part name="return" type="tns:ResultData" />
+  </wsdl:message>
+  <wsdl:portType name="createSalePortType">
+    <wsdl:operation name="createSale">
+      <documentation>Regresa: strStatus, strCode y strResult</documentation>
+      <wsdl:input message="tns:createSaleRequest" />
+      <wsdl:output message="tns:createSaleResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="createSaleBinding" type="tns:createSalePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="createSale">
+      <soap:operation soapAction="urn:createSale#createSale" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:createSale" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:createSale" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="createSale">
+    <wsdl:port name="createSalePort" binding="tns:createSaleBinding">
+      <soap:address location="https://www.netwarmonitor.com:443/clientes/hospital/wsFacturacion/createSale.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
